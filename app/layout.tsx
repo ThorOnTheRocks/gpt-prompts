@@ -1,3 +1,5 @@
+import Nav from '@/components/Nav';
+import Provider from '@/components/Provider';
 import '../styles/global.css';
 
 export const metadata = {
@@ -8,14 +10,17 @@ export const metadata = {
 const RootLayout = ({children}) => {
   return (
     <html lang="en">
-      <body>
-        <div className="main">
-          <div className="gradient" />
-        </div>
+      <body suppressHydrationWarning={true}>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
 
-        <main className="app">
-          {children}
-        </main>
+          <main className="app">
+            <Nav />
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   );
