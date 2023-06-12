@@ -14,7 +14,7 @@ const CreatePrompt = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const createPrompt =async (e) => {
+  const createPrompt = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
